@@ -10,10 +10,10 @@ export default function App() {
     if (hash) {
       const token = hash.substring(1).split("&")[0].split("=")[1];
       if (token) {
-        dispatch({ type: reducerCases.SET_TOKEN, token });
+        dispatch({ type: reducerCases.SET_TOKEN, token: token });
       }
     }
-    document.title = "Spotify";
+    document.title = "Totify-app";
   }, [dispatch, token]);
   return <div>{token ? <Spotify /> : <Login />}</div>;
 }
